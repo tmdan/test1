@@ -15,10 +15,10 @@ use Illuminate\Routing\Controller as BaseController;
  * )
  *
  * @OA\Server(
- *      url=L5_SWAGGER_CONST_HOST_LOCAL,
+ *      url=L5_SWAGGER_CONST_HOST,
  * )
  * @OA\Server(
- *      url=L5_SWAGGER_CONST_HOST,
+ *      url=L5_SWAGGER_CONST_HOST_LOCAL,
  * )
  *
  */

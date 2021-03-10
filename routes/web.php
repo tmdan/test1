@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Author;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,13 @@ Route::get('/', function () {
 
     return view('welcome');
 });
+
+Route::get('/clear-cache', function () {
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    $exitCode = Artisan::call('l5-swagger:generate');
+    $exitCode = Artisan::call('migrate:fresh --seed');
+    return 'DONE'; //Return anything
+});
+

@@ -15,8 +15,9 @@ class AuthController extends Controller
 {
     /**
      *
-     * @OA\POST (
+     * @OA\Post (
      *     path="/api/login",
+     *     operationId="post.api.login",
      *     summary="Вход для пользователя",
      *     tags={"Auth"},
      *      @OA\RequestBody(
@@ -95,8 +96,9 @@ class AuthController extends Controller
     /**
      *
      *
-     * @OA\POST (
+     * @OA\Post (
      *     path="/api/singin",
+     *     operationId="post.api.singin",
      *     summary="Регистрация нового пользователя",
      *     tags={"Auth"},
      *      @OA\RequestBody(
